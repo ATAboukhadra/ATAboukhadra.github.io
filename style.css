@@ -1,0 +1,28 @@
+body {
+	background-color: #FF69B4;
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.circle img {
+	width: 100%;
+	height: auto;
+}
+
+h1 {
+	color: #4B0082;
+}
+
+a {
+	color: #4B0082;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
