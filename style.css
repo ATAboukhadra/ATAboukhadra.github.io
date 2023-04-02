@@ -37,14 +37,18 @@ ul {
 li {
     margin-bottom: 10px;
 }
+
 a {
-    color: #333;
+    color: blue;
     text-decoration: none;
+    border-bottom: 1px solid blue;
+    transition: border-bottom-color 0.3s ease;
 }
+
 a:hover {
-    color: #fff;
-    background-color: #333;
+    border-bottom-color: transparent;
 }
+  
 
 .profile-info {
     display: flex;
@@ -57,7 +61,7 @@ a:hover {
   }
   
   .profile-image img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     border-radius: 50%;
     border: 3px solid #333;
@@ -71,4 +75,86 @@ a:hover {
   .profile-intro p {
     margin-bottom: 10px;
   }
+
+  .project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
   
+  .project-image {
+    margin-right: 20px;
+  }
+  
+  .project-image img {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  
+  .project-info h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .project-info p {
+    margin-top: 1;
+    margin-bottom: 0;
+  }
+
+
+  .exp-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .exp-info {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 34px);
+  }
+  
+  .exp-date {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .exp-position {
+    font-style: italic;
+    margin-right: 10px;
+  }
+  
+  .exp-company {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .exp-location {
+    color: #666;
+    margin-right: 10px;
+  }
+  
+  .exp-description {
+    margin-top: 5px;
+  }
+  
+
+  /* .exp-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .exp-info > div {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+  }
+  
+  .exp-info > div:last-child {
+    flex-basis: 100%;
+  } */
