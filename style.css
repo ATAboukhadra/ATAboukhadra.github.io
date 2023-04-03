@@ -105,8 +105,8 @@ a:hover {
 
 
   .exp-logo {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     margin-right: 10px;
     display: inline-flex;
     align-items: center;
@@ -144,18 +144,56 @@ a:hover {
     margin-bottom: 30px;
   }
   
+  .skill-tag { 
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #6c757d;
+    border-radius: 20px;
+  }
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
 
-  /* .exp-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .skill {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
   }
   
-  .exp-info > div {
-    flex-basis: 48%;
-    margin-bottom: 10px;
+  .skill-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
   }
   
-  .exp-info > div:last-child {
-    flex-basis: 100%;
-  } */
+  .progress-bar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+  } 
+
+
+.skills-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
