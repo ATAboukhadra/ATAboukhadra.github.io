@@ -6,6 +6,19 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<header>
+		<nav>
+		  <ul>
+			<li><a href="#experience">Experience</a></li>
+			<li><a href="#teaching">Teaching</a></li>
+			<li><a href="#publications">Publications</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#achievements">Achievements</a></li>
+
+		  </ul>
+		</nav>
+	  </header>
+
 	<div class="container">
 		<div class="profile-info">
 			<div class="profile-image">
@@ -20,34 +33,94 @@
 					
 			</div>
 		  </div>
-		<h2>Experience</h2>
+		<h2 id="experience">Experience</h2>
 		<ul>
 			<li>
 				<div class="exp-info">
 					<div><span class="exp-date">Oct 2021 - Now</span>
-						<span class="exp-position">Researcher and PhD Candidate</span></div>
+						<span class="exp-position">Researcher</span></div>
 					<div>
 						<div class="exp-logo"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png" alt="Location"></div>
 						<span class="exp-company">Augmented Vision, DFKI</span>
 						<span class="exp-location">Kaiserslautern, Germany</span></div>
 					<div class="exp-description">Hand-Object 3D Reconstruction from RGB and depth using Deep Learning networks such as GCNs and Transformers</div>
 					</div>
-
+					<div class="exp-info">
+						<div><span class="exp-date">March 2021 - August 2021</span>
+							<span class="exp-position">M.Sc. Thesis</span></div>
+						<div>
+							<div class="exp-logo"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png" alt="Location"></div>
+							<span class="exp-company">CISPA</span>
+							<span class="exp-location">Saarbr&uuml;cken, Germany</span></div>
+						<div class="exp-description">Investigated defenses against ML attacks on deep ConvNets as a Master thesis</div>
+						</div>
 				<div class="exp-info">
 				<div><span class="exp-date">Sep 2020 - Jan 2021</span>
 					<span class="exp-position">ML Intern</span></div>
 				<div>
 					<div class="exp-logo"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png" alt="Location"></div>
 					<span class="exp-company">HackerOne</span>
-					<span class="exp-location">Groningen, Netherlands</span></div>
-				<div class="exp-description">Worked on developing an ML-based system for detecting duplicate vulnerability reports using NLP techniques such as Word Embedding and BERT.</div>
+					<span class="exp-location">Groningen, The Netherlands</span></div>
+				<div class="exp-description">Worked on developing an ML-based system for detecting duplicate vulnerability reports using NLP techniques such as Word Embedding and BERT</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+		<h2 id="teaching">Teaching</h2>
+		<ul>
+			<li>
+				<div class="exp-info">
+					<div><span class="exp-date">Nov 2022</span>
+						<span class="exp-position">Lecturer</span></div>
+					<div>
+						<div class="exp-logo"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png" alt="Location"></div>
+						<span class="exp-company">RPTU</span>
+						<span class="exp-location">Kaiserslautern, Germany</span></div>
+					<div class="exp-description">Graph Convolutional Networks and Transformers and their applications in 3D Pose Estimation</div>
+					</div>
+
+				<div class="exp-info">
+					<div><span class="exp-date">Oct 2019 - May 2020</span>
+						<span class="exp-position">Teaching Assistant</span></div>
+					<div>
+						<div class="exp-logo"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png" alt="Location"></div>
+						<span class="exp-company">Maastricht University</span>
+						<span class="exp-location">Maastricht, The Netherlands</span></div>
+					<div class="exp-description">OOP using Java, Machine Learning, and Data Structures and Algorithms</div>
+					</div>
+
+				<div class="exp-info">
+				<div><span class="exp-date">Oct 2018 - May 2019</span>
+					<span class="exp-position">Teaching Assistant</span></div>
+				<div>
+					<div class="exp-logo"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png" alt="Location"></div>
+					<span class="exp-company">German University in Cairo (GUC)</span>
+					<span class="exp-location">Cairo, Egypt</span></div>
+				<div class="exp-description">Introduction to CS using Python</div>
 				</div>
 			</li>
 		</ul>
 
-		<h2>Skills</h2>
+		<h2 id="publications">Publications</h2>
+		<ul>
 			
+			<li>
+				<div class="project">
+					<div class="project-image">
+					  <img src="thor.png" alt="THOR-Net">
+					</div>
+					<div class="project-info">
+					  <h3>THOR-Net: End-to-end Graformer-based Realistic Two Hands and Object Reconstruction with Self-supervision</h3>
+					  <p>Ahmed Tawfik Aboukhadra, Jameel Malik, Ahmed Elhayek, Nadia Robertini, Didier Stricker; 
+						  Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2023</p>
+					  <p><a href="https://openaccess.thecvf.com/content/WACV2023/html/Aboukhadra_THOR-Net_End-to-End_Graformer-Based_Realistic_Two_Hands_and_Object_Reconstruction_With_WACV_2023_paper.html">Paper</a> | <a href="https://github.com/ATAboukhadra/THOR-Net">Code</a></p>
+					</div>
+				  </div>
+			</li>
+		</ul>
 
+		<h2 id="skills">Skills</h2>
+			
 		<div class="skills-progress">
 			<div class="skill">
 			  <span class="skill-name">Python</span>
@@ -105,25 +178,7 @@
 			  </div>
 		  </div>
 
-		<h2>Publications</h2>
-		<ul>
-			
-			<li>
-				<div class="project">
-					<div class="project-image">
-					  <img src="thor.png" alt="THOR-Net">
-					</div>
-					<div class="project-info">
-					  <h3>THOR-Net: End-to-end Graformer-based Realistic Two Hands and Object Reconstruction with Self-supervision</h3>
-					  <p>Ahmed Tawfik Aboukhadra, Jameel Malik, Ahmed Elhayek, Nadia Robertini, Didier Stricker; 
-						  Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2023</p>
-					  <p><a href="https://github.com/ATAboukhadra/THOR-Net">Code</a> | <a href="https://openaccess.thecvf.com/content/WACV2023/html/Aboukhadra_THOR-Net_End-to-End_Graformer-Based_Realistic_Two_Hands_and_Object_Reconstruction_With_WACV_2023_paper.html">Paper</a></p>
-					</div>
-				  </div>
-			</li>
-		</ul>
-
-		<h2>Achievements</h2>
+		<h2 id="achievements">Achievements</h2>
 		<ul>
 		<li>
 			<div class="exp-info">

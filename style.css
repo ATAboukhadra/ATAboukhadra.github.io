@@ -41,12 +41,15 @@ li {
 a {
     color: blue;
     text-decoration: none;
-    border-bottom: 1px solid blue;
+    /* border-bottom: 1px solid blue; */
     transition: border-bottom-color 0.3s ease;
 }
 
 a:hover {
-    border-bottom-color: transparent;
+  background-color: #d5e5f5;
+  text-decoration: none;
+
+    /* border-bottom-color: transparent; */
 }
   
 
@@ -197,3 +200,42 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+
+
+header {
+  background-color: #f5f8fd;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* header nav ul li:not(:last-child) a {
+  border-right: 1px solid #ddd;
+} */
+
+header nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+header nav ul li a:hover {
+  background-color: #d5e5f5;
+}
+
