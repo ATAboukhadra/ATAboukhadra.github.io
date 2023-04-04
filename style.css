@@ -1,198 +1,242 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
+
 h1 {
-    margin-top: 0;
+  margin-top: 0;
 }
+
 .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
 }
+
 img {
-    max-width: 50%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-    border: 3px solid #333;
-    box-shadow: 0 0 10px #333;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid #333;
+  box-shadow: 0 0 10px #333;
 }
+
 h2 {
-    margin-top: 40px;
+  margin-top: 40px;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
 li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 a {
-    color: blue;
-    text-decoration: none;
-    /* border-bottom: 1px solid blue; */
-    transition: border-bottom-color 0.3s ease;
+  color: blue;
+  text-decoration: none;
+  /* border-bottom: 1px solid blue; */
+  transition: border-bottom-color 0.3s ease;
 }
 
 a:hover {
   background-color: #d5e5f5;
   text-decoration: none;
 
-    /* border-bottom-color: transparent; */
+  /* border-bottom-color: transparent; */
 }
-  
+
 
 .profile-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .profile-image {
-    margin-right: 20px;
-  }
-  
-  .profile-image img {
-    max-width: 75%;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid #333;
-    box-shadow: 0 0 10px #333;
-  }
-  
-  .profile-intro h1 {
-    margin-top: 0;
-  }
-  
-  .profile-intro p {
-    margin-bottom: 10px;
-  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-  .project {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .project-image {
-    margin-right: 20px;
-  }
-  
-  .project-image img {
-    width: 800px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 0;
-  }
-  
-  .project-info h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+.profile-image {
+  margin-right: 20px;
+}
 
-  .project-info p {
-    margin-top: 1;
-    margin-bottom: 0;
-  }
+.profile-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #333;
+  box-shadow: 0 0 10px #333;
+}
+
+.profile-intro h1 {
+  margin-top: 0;
+}
+
+.profile-intro p {
+  margin-bottom: 10px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  margin-right: 20px;
+}
+
+.project-image img {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.project-info h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.project-info p {
+  margin-top: 1;
+  margin-bottom: 0;
+}
 
 
-  .exp-logo {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .exp-info {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(100% - 34px);
-  }
-  
-  .exp-date {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .exp-position {
-    font-style: italic;
-    margin-right: 10px;
-  }
-  
-  .exp-company {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .exp-location {
-    color: #666;
-    margin-right: 10px;
-  }
-  
-  .exp-description {
-    margin-top: 5px;
-    margin-bottom: 30px;
-  }
-  
-  .skill-tag { 
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 5px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #6c757d;
-    border-radius: 20px;
-  }
-  .skills-list {
-    list-style: none;
-    padding: 0;
-  }
+.ed-info {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 34px);
+}
 
-  .skill {
-    display: inline-block;
-    margin: 5px;
-    padding: 5px 10px;
-    background-color: #eee;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .skill-name {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  
-  .progress-bar {
-    display: inline-block;
-    vertical-align: middle;
-    width: 90px;
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 10px;
-  }
-  
-  .progress {
-    height: 100%;
-    background-color: #4CAF50;
-    border-radius: 10px;
-  } 
+.ed-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+.ed-info > div {
+  overflow: hidden; /* clear the float */
+}
+
+.ed-logo img {
+  max-width: 80%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+}
+
+
+.exp-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* float: left; */
+}
+
+.exp-logo img {
+  max-width: 50%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+}
+
+.exp-info {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 34px);
+}
+
+.exp-date {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.exp-position {
+  font-style: italic;
+  margin-right: 10px;
+}
+
+.exp-company {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.exp-location {
+  color: #666;
+  margin-right: 10px;
+}
+
+.exp-description {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #6c757d;
+  border-radius: 20px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #eee;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.skill-name {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.progress-bar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 10px;
+}
 
 
 .skills-progress {
@@ -232,4 +276,12 @@ nav a:hover {
   background-color: #4aa3df;
   color: #fff;
   border-radius: 10px;
+}
+
+.section-divider {
+  margin: 2rem auto;
+  border: none;
+  border-top: 2px solid #ddd;
+  width: 80%;
+  max-width: 800px;
 }
