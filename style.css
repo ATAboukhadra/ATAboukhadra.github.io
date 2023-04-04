@@ -201,45 +201,6 @@ a:hover {
   justify-content: space-between;
 }
 
-
-/* header {
-  background-color: #f5f8fd;
-}
-
-header nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-/* header nav ul li:not(:last-child) a {
-  border-right: 1px solid #ddd;
-} */
-
-/* header nav ul li a {
-  display: block;
-  padding: 10px;
-  color: #f5f8fd;
-  text-decoration: none;
-  font-weight: bold;
-} */
-
-
-
-/* header nav ul li a:hover {
-  background-color: #d5e5f5;
-}  */
-
-
 header {
   display: flex;
   justify-content: center;
@@ -270,6 +231,5 @@ nav a {
 nav a:hover {
   background-color: #4aa3df;
   color: #fff;
-  padding: 15px;
   border-radius: 10px;
 }
