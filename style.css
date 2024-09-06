@@ -98,7 +98,7 @@ a:hover {
 
 .project-image img {
   width: 800px;
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   border-radius: 0;
 }
