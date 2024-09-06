@@ -101,7 +101,7 @@ a:hover {
   max-width: 100%;
   height: auto;
   border-radius: 0;
-  object-fit: cover; /* Maintains aspect ratio, cropping if necessary */
+  /* object-fit: cover; Maintains aspect ratio, cropping if necessary */
 } 
 
 .project-info h3 {
