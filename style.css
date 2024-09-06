@@ -99,7 +99,7 @@ a:hover {
 .project-image img {
   width: 800px;
   height: 450px;
-  max-width: 100%;
+  /* max-width: 100%; */
   /* height: auto; */
   border-radius: 0;
   /* object-fit: cover; Maintains aspect ratio, cropping if necessary */
