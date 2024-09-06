@@ -99,9 +99,9 @@ a:hover {
 
 .project-image img {
   max-width: 100%;
-  max-height: 100%;
+  /* max-height: 100%; */
   border-radius: 0;
-  object-fit: fill; /*Maintains aspect ratio, cropping if necessary*/
+  /* object-fit: fill; Maintains aspect ratio, cropping if necessary */
 } 
 
 .project-info h3 {
