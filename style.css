@@ -96,12 +96,21 @@ a:hover {
   margin-right: 20px;
 }
 
-.project-image img {
+/* .project-image img {
   width: 800px;
-  max-width: 200px;
+  max-width: 100%;
   height: auto;
   border-radius: 0;
+} */
+
+.project-image img {
+  width: 800px; /* Set to your desired fixed width */
+  height: 450px; /* Set to your desired fixed height */
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  border-radius: 0; /* Optional, adjust as needed */
+  object-fit: cover; /* Maintains aspect ratio, cropping if necessary */
 }
+
 
 .project-info h3 {
   margin-top: 0;
