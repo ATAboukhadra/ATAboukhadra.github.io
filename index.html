@@ -1,369 +1,443 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ahmed Tawfik Aboukhadra - GitHub Profile</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<meta name="google-site-verification" content="VhaWsI41aAz7ZXGHAcBkFmSBexoHgLPDpS01rtlxzA0" />
 </head>
 
 <body>
-	<header>
-		<nav>
+	<header class="site-header">
+		<nav class="site-nav">
 			<ul>
-				<li><a href="#experience">Experience</a></li>
-				<li><a href="#education">Education</a></li>
-				<li><a href="#teaching">Teaching</a></li>
-				<li><a href="#publications">Publications</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#achievements">Achievements</a></li>
-
+				<li><a class="nav-link" href="#experience">Experience</a></li>
+				<li><a class="nav-link" href="#education">Education</a></li>
+				<li><a class="nav-link" href="#teaching">Teaching</a></li>
+				<li><a class="nav-link" href="#publications">Publications</a></li>
+				<li><a class="nav-link" href="#skills">Skills</a></li>
+				<li><a class="nav-link" href="#achievements">Achievements</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<div class="container">
-		<div class="profile-info">
-			<div class="profile-image">
-				<img src="images/photo.png" alt="Profile Picture">
-			</div>
-			<div class="profile-intro">
-				<h1>Ahmed Tawfik Aboukhadra</h1>
-				<p>I'm a Researcher at the <a
-						href="https://www.dfki.de/web/forschung/forschungsbereiche/erweiterte-realitaet">Augmented
-						Vision department at DFKI</a> and a PhD student at <a
-						href="https://www.informatik.uni-kl.de/">RPTU</a> in Kaiserslautern
-					working on hand object pose estimation and 3D reconstruction from RGB and Depth using Deep Learning
-					methods such as GCNs and Transformers since October 2021.
-					I have a M.Sc. in Artificial Intelligence from Maastricht University and a B.Sc. in Computer Science
-					from the German University in Cairo.</p>
-				<div class="social-links">
-					<a class="social-link" href="mailto:ahmed.tawfik96@gmail.com" aria-label="Email">
-						<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-							<path
-								d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 4.2 8 5.2 8-5.2V6l-8 5-8-5v2.2z" />
-						</svg>
-					</a>
-					<a class="social-link"
-						href="https://scholar.google.com/citations?user=VmkFR2UAAAAJ&hl=en" aria-label="Google Scholar">
-						<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-							<path
-								d="M12 2 1 8l11 6 9-4.9V17h2V8L12 2zm0 13L3.7 10.6V18L12 22l8.3-4.4v-6.9L12 15z" />
-						</svg>
-					</a>
-					<a class="social-link" href="https://www.linkedin.com/in/ahmed-tawfik-aboukhadra/"
-						aria-label="LinkedIn">
-						<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-							<path
-								d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.5 4.7 5.8V21h-4v-5.1c0-1.2 0-2.8-1.8-2.8-1.8 0-2.1 1.4-2.1 2.7V21H9z" />
-						</svg>
-					</a>
-					<a class="social-link" href="https://github.com/ATAboukhadra" aria-label="GitHub">
-						<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-							<path
-								d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .8.1-.7.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.4.1-2.8 0 0 .9-.3 2.9 1a10 10 0 0 1 5.2 0c2-1.3 2.9-1 2.9-1 .5 1.4.2 2.5.1 2.8a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.4.7 1 .7 2.1v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z" />
-						</svg>
-					</a>
+		<section class="intro-section">
+			<div class="profile-info">
+				<div class="profile-image">
+					<img src="images/photo.png" alt="Profile Picture">
 				</div>
-
-			</div>
-		</div>
-		<hr class="section-divider" id="experience">
-
-		<h2>Experience</h2>
-		<ul>
-			<li>
-				<div class="exp-info">
-					<div><span class="exp-date">Oct 2021 - Now</span>
-						<span class="exp-position">Researcher</span>
+				<div class="profile-intro">
+					<h1>Ahmed Tawfik Aboukhadra</h1>
+					<p>I'm a Researcher at the <a
+							href="https://www.dfki.de/web/forschung/forschungsbereiche/erweiterte-realitaet">Augmented
+							Vision department at DFKI</a> and a PhD student at <a
+							href="https://www.informatik.uni-kl.de/">RPTU</a> in Kaiserslautern
+						working on hand object pose estimation and 3D reconstruction from RGB and Depth using Deep Learning
+						methods such as GCNs and Transformers since October 2021.
+						I have a M.Sc. in Artificial Intelligence from Maastricht University and a B.Sc. in Computer Science
+						from the German University in Cairo.</p>
+					<div class="social-links">
+						<a class="social-link" href="mailto:ahmed.tawfik96@gmail.com" aria-label="Email">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 4.2 8 5.2 8-5.2V6l-8 5-8-5v2.2z" />
+							</svg>
+						</a>
+						<a class="social-link"
+							href="https://scholar.google.com/citations?user=VmkFR2UAAAAJ&hl=en" aria-label="Google Scholar">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M12 2 1 8l11 6 9-4.9V17h2V8L12 2zm0 13L3.7 10.6V18L12 22l8.3-4.4v-6.9L12 15z" />
+							</svg>
+						</a>
+						<a class="social-link" href="https://www.linkedin.com/in/ahmed-tawfik-aboukhadra/"
+							aria-label="LinkedIn">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.5 4.7 5.8V21h-4v-5.1c0-1.2 0-2.8-1.8-2.8-1.8 0-2.1 1.4-2.1 2.7V21H9z" />
+							</svg>
+						</a>
+						<a class="social-link" href="https://github.com/ATAboukhadra" aria-label="GitHub">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .8.1-.7.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.4.1-2.8 0 0 .9-.3 2.9 1a10 10 0 0 1 5.2 0c2-1.3 2.9-1 2.9-1 .5 1.4.2 2.5.1 2.8a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.4.7 1 .7 2.1v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z" />
+							</svg>
+						</a>
 					</div>
-					<div>
-						<div class="exp-logo"><img
-								src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-								alt="Location"></div>
-						<span class="exp-company">Augmented Vision, DFKI</span>
-						<span class="exp-location">Kaiserslautern, Germany</span>
-					</div>
-					<div class="exp-description">Hand-Object 3D Reconstruction from RGB and depth using Deep Learning
-						networks such as GCNs and Transformers</div>
-				</div>
-			</li>
-			<li>
-				<div class="exp-info">
-					<div><span class="exp-date">March 2021 - August 2021</span>
-						<span class="exp-position">M.Sc. Thesis</span>
-					</div>
-					<div>
-						<div class="exp-logo"><img
-								src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-								alt="Location"></div>
-						<span class="exp-company">CISPA</span>
-						<span class="exp-location">Saarbr&uuml;cken, Germany</span>
-					</div>
-					<div class="exp-description">ML Privacy: Investigating defenses against ML attacks on deep ConvNets
-						as a Master thesis</div>
-				</div>
-			</li>
-			<li>
-				<div class="exp-info">
-					<div><span class="exp-date">Sep 2020 - Jan 2021</span>
-						<span class="exp-position">ML Intern</span>
-					</div>
-					<div>
-						<div class="exp-logo"><img
-								src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-								alt="Location"></div>
-						<span class="exp-company">HackerOne</span>
-						<span class="exp-location">Groningen, The Netherlands</span>
-					</div>
-					<div class="exp-description">Worked on developing an ML-based system for detecting duplicate
-						vulnerability reports using NLP techniques such as Word Embedding and BERT</div>
-				</div>
-			</li>
-		</ul>
-		<hr class="section-divider" id="education">
-
-		<h2>Education</h2>
-		<ul>
-			<li>
-				<div class="ed-info">
-					<div class="ed-logo"><img
-						src="images/hourglass.png"
-						alt="Location">
-					</div>
-					<div><span class="exp-date">October 2021 - Ongoing</span>
-						<span class="exp-position">Ph.D. in Computer Science</span>
-					</div>
-					<div>
-						<span class="exp-company">RPTU</span>
-						<span class="exp-location">Kaiserslautern, Germany</span>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="ed-info">
-					<div class="ed-logo"><img
-						src="images/grad.png"
-						alt="Location">
-					</div>
-					<div><span class="exp-date">Sep 2019 - August 2021</span>
-						<span class="exp-position">M.Sc. in Artificial Intelligence</span>
-					</div>
-					<div>
-						<span class="exp-company">Maastricht University</span>
-						<span class="exp-location">Maastricht, The Netherlands</span>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="ed-info">
-					<div class="ed-logo"><img
-						src="images/grad.png"
-						alt="Location">
-					</div>
-					<div>
-						
-						<span class="exp-date">Oct 2014 - May 2019</span>
-						<span class="exp-position">B.Sc. in Computer Science and Engineering</span>
-					</div>
-					<div>
-						<span class="exp-company">German University in Cairo (GUC)</span>
-						<span class="exp-location">Cairo, Egypt</span>
-					</div>
-				</div>
-			</li>
-		</ul>
-		<hr class="section-divider" id="teaching">
-
-		<h2>Teaching</h2>
-		<ul>
-			<li>
-				<div class="exp-info">
-					<div><span class="exp-date">Nov 2022</span>
-						<span class="exp-position">Lecturer</span>
-					</div>
-					<div>
-						<div class="exp-logo"><img
-								src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-								alt="Location"></div>
-						<span class="exp-company">RPTU</span>
-						<span class="exp-location">Kaiserslautern, Germany</span>
-					</div>
-					<div class="exp-description">Graph Convolutional Networks and Transformers and their applications in
-						3D Pose Estimation</div>
-				</div>
-			</li>
-			<li>
-				<div class="exp-info">
-					<div><span class="exp-date">Oct 2019 - May 2020</span>
-						<span class="exp-position">Teaching Assistant</span>
-					</div>
-					<div>
-						<div class="exp-logo"><img
-								src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-								alt="Location"></div>
-						<span class="exp-company">Maastricht University</span>
-						<span class="exp-location">Maastricht, The Netherlands</span>
-					</div>
-					<div class="exp-description">OOP using Java, Machine Learning, and Data Structures and Algorithms
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="exp-info">
-					<div><span class="exp-date">Oct 2018 - May 2019</span>
-						<span class="exp-position">Teaching Assistant</span>
-					</div>
-					<div>
-						<div class="exp-logo"><img
-								src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-								alt="Location"></div>
-						<span class="exp-company">German University in Cairo (GUC)</span>
-						<span class="exp-location">Cairo, Egypt</span>
-					</div>
-					<div class="exp-description">Introduction to CS using Python</div>
-				</div>
-			</li>
-		</ul>
-		<hr class="section-divider" id="publications">
-
-		<h2>Publications</h2>
-		<ul>
-			<li>
-				<div class="project">
-					<div class="project-image">
-						<img src="images/SurgeoNet.jpg" alt="SurgeoNet">
-					</div>
-					<div class="project-info">
-						<h3>SurgeoNet: Realtime 3D Pose Estimation of Articulated Surgical Instruments using a Synthetically-trained Network</h3>
-						<p>Ahmed Tawfik Aboukhadra, Nadia Robertini, Jameel Malik, Ahmed Elhayek, Gerd Reis, Didier Stricker;
-							German Conference on Pattern Recognition (GCPR), 2024</p>
-						<p><a href="">Paper</a>
-							| <a href="https://github.com/ATAboukhadra/SurgeoNet">Code</a></p>
-				</div>
-			</li>
-			<li>
-				<div class="project">
-					<div class="project-image">
-						<img src="images/ShapeGraFormer.png" alt="ShapeGraFormer">
-					</div>
-					<div class="project-info">
-						<h3>ShapeGraFormer: GraFormer-Based Network for Hand-Object Reconstruction from a Single Depth Map</h3>
-						<p>Ahmed Tawfik Aboukhadra, Jameel Malik, Nadia Robertini, Ahmed Elhayek, Didier Stricker;
-							IEEE Access, 2024</p>
-						<p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10639406">Paper</a>
-				</div>
-			</li>
-			<li>
-				<div class="project">
-					<div class="project-image">
-						<img src="images/thor.png" alt="THOR-Net">
-					</div>
-					<div class="project-info">
-						<h3>THOR-Net: End-to-end Graformer-based Realistic Two Hands and Object Reconstruction with
-							Self-supervision</h3>
-						<p>Ahmed Tawfik Aboukhadra, Jameel Malik, Ahmed Elhayek, Nadia Robertini, Didier Stricker;
-							Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2023</p>
-						<p><a
-								href="https://openaccess.thecvf.com/content/WACV2023/html/Aboukhadra_THOR-Net_End-to-End_Graformer-Based_Realistic_Two_Hands_and_Object_Reconstruction_With_WACV_2023_paper.html">Paper</a>
-							| <a href="https://github.com/ATAboukhadra/THOR-Net">Code</a></p>
-					</div>
-				</div>
-			</li>
-		</ul>
-		<hr class="section-divider" id="skills">
-
-		<h2>Skills</h2>
-
-		<div class="skills-progress">
-			<div class="skill">
-				<span class="skill-name">Python</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 90%"></div>
-				</div>
-			</div>
-			<div class="skill">
-				<span class="skill-name">PyTorch</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 90%"></div>
-				</div>
-			</div>
-			<div class="skill">
-				<span class="skill-name">Deep Learning</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 80%"></div>
-				</div>
-
-			</div>
-			<div class="skill">
-				<span class="skill-name">Java</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 80%"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="skills-progress">
-
-			<div class="skill">
-				<span class="skill-name">OOP</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 80%"></div>
-				</div>
-			</div>
-			<div class="skill">
-				<span class="skill-name">Computer Vision</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 70%"></div>
-				</div>
-			</div>
-			<div class="skill">
-				<span class="skill-name">Git</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 70%"></div>
 				</div>
 			</div>
 
-			<div class="skill">
-				<span class="skill-name">SQL</span>
-				<div class="progress-bar">
-					<div class="progress" style="width: 60%"></div>
+			<div class="highlights">
+				<div class="highlight-card">
+					<span class="highlight-label">Focus</span>
+					<p>Hand-object pose estimation and 3D reconstruction from RGB and depth.</p>
+				</div>
+				<div class="highlight-card">
+					<span class="highlight-label">Methods</span>
+					<p>Graph neural networks, transformers, and deep learning for 3D perception.</p>
+				</div>
+				<div class="highlight-card">
+					<span class="highlight-label">Current</span>
+					<p>Researcher at DFKI AV and PhD student at RPTU, Kaiserslautern.</p>
 				</div>
 			</div>
-		</div>
-		<hr class="section-divider" id="achievements">
+		</section>
 
-		<h2>Achievements</h2>
-		<ul>
-			<li>
-				<div class="ed-info">
-					<div class="ed-logo"><img src="images/trophy.webp" alt="Award"></div>
-					<div>
-						<span class="exp-date">2019</span>
-						<span class="exp-position">M.Sc. Scholarship</span>
+		<hr class="section-divider">
+
+		<section id="experience" class="section">
+			<h2>Experience</h2>
+			<ul>
+				<li>
+					<div class="exp-info">
+						<div><span class="exp-date">Oct 2021 - Now</span>
+							<span class="exp-position">Researcher</span>
+						</div>
+						<div>
+							<div class="exp-logo"><img
+									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
+									alt="Location"></div>
+							<span class="exp-company">Augmented Vision, DFKI</span>
+							<span class="exp-location">Kaiserslautern, Germany</span>
+						</div>
+						<div class="exp-description">Hand-Object 3D Reconstruction from RGB and depth using Deep Learning
+							networks such as GCNs and Transformers</div>
 					</div>
-					<div>
-						<span class="exp-description">UM Holland High-Potential Scholarship Holder 2019. &#8364;58,000
-							grant to pursue a MSc in AI.</span>
+				</li>
+				<li>
+					<div class="exp-info">
+						<div><span class="exp-date">March 2021 - August 2021</span>
+							<span class="exp-position">M.Sc. Thesis</span>
+						</div>
+						<div>
+							<div class="exp-logo"><img
+									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
+									alt="Location"></div>
+							<span class="exp-company">CISPA</span>
+							<span class="exp-location">Saarbruecken, Germany</span>
+						</div>
+						<div class="exp-description">ML Privacy: Investigating defenses against ML attacks on deep ConvNets
+							as a Master thesis</div>
+					</div>
+				</li>
+				<li>
+					<div class="exp-info">
+						<div><span class="exp-date">Sep 2020 - Jan 2021</span>
+							<span class="exp-position">ML Intern</span>
+						</div>
+						<div>
+							<div class="exp-logo"><img
+									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
+									alt="Location"></div>
+							<span class="exp-company">HackerOne</span>
+							<span class="exp-location">Groningen, The Netherlands</span>
+						</div>
+						<div class="exp-description">Worked on developing an ML-based system for detecting duplicate
+							vulnerability reports using NLP techniques such as Word Embedding and BERT</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<hr class="section-divider">
+
+		<section id="education" class="section">
+			<h2>Education</h2>
+			<ul>
+				<li>
+					<div class="ed-info">
+						<div class="ed-logo"><img src="images/hourglass.png" alt="Location"></div>
+						<div><span class="exp-date">October 2021 - Ongoing</span>
+							<span class="exp-position">Ph.D. in Computer Science</span>
+						</div>
+						<div>
+							<span class="exp-company">RPTU</span>
+							<span class="exp-location">Kaiserslautern, Germany</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ed-info">
+						<div class="ed-logo"><img src="images/grad.png" alt="Location"></div>
+						<div><span class="exp-date">Sep 2019 - August 2021</span>
+							<span class="exp-position">M.Sc. in Artificial Intelligence</span>
+						</div>
+						<div>
+							<span class="exp-company">Maastricht University</span>
+							<span class="exp-location">Maastricht, The Netherlands</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ed-info">
+						<div class="ed-logo"><img src="images/grad.png" alt="Location"></div>
+						<div>
+							<span class="exp-date">Oct 2014 - May 2019</span>
+							<span class="exp-position">B.Sc. in Computer Science and Engineering</span>
+						</div>
+						<div>
+							<span class="exp-company">German University in Cairo (GUC)</span>
+							<span class="exp-location">Cairo, Egypt</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<hr class="section-divider">
+
+		<section id="teaching" class="section">
+			<h2>Teaching</h2>
+			<ul>
+				<li>
+					<div class="exp-info">
+						<div><span class="exp-date">Nov 2022</span>
+							<span class="exp-position">Lecturer</span>
+						</div>
+						<div>
+							<div class="exp-logo"><img
+									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
+									alt="Location"></div>
+							<span class="exp-company">RPTU</span>
+							<span class="exp-location">Kaiserslautern, Germany</span>
+						</div>
+						<div class="exp-description">Graph Convolutional Networks and Transformers and their applications in
+							3D Pose Estimation</div>
+					</div>
+				</li>
+				<li>
+					<div class="exp-info">
+						<div><span class="exp-date">Oct 2019 - May 2020</span>
+							<span class="exp-position">Teaching Assistant</span>
+						</div>
+						<div>
+							<div class="exp-logo"><img
+									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
+									alt="Location"></div>
+							<span class="exp-company">Maastricht University</span>
+							<span class="exp-location">Maastricht, The Netherlands</span>
+						</div>
+						<div class="exp-description">OOP using Java, Machine Learning, and Data Structures and Algorithms</div>
+					</div>
+				</li>
+				<li>
+					<div class="exp-info">
+						<div><span class="exp-date">Oct 2018 - May 2019</span>
+							<span class="exp-position">Teaching Assistant</span>
+						</div>
+						<div>
+							<div class="exp-logo"><img
+									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
+									alt="Location"></div>
+							<span class="exp-company">German University in Cairo (GUC)</span>
+							<span class="exp-location">Cairo, Egypt</span>
+						</div>
+						<div class="exp-description">Introduction to CS using Python</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<hr class="section-divider">
+
+		<section id="publications" class="section">
+			<h2>Publications</h2>
+			<ul>
+				<li>
+					<article class="project">
+						<div class="project-image">
+							<img src="images/SurgeoNet.jpg" alt="SurgeoNet">
+						</div>
+						<div class="project-info">
+							<div class="project-meta">
+								<span class="badge">GCPR 2024</span>
+								<span class="badge">Realtime 3D Pose</span>
+							</div>
+							<h3>SurgeoNet: Realtime 3D Pose Estimation of Articulated Surgical Instruments using a
+								Synthetically-trained Network</h3>
+							<p class="project-authors">Ahmed Tawfik Aboukhadra, Nadia Robertini, Jameel Malik, Ahmed Elhayek,
+								Gerd Reis, Didier Stricker</p>
+							<div class="project-actions">
+							<a class="btn" href="https://arxiv.org/pdf/2410.01293">Paper</a>
+								<a class="btn btn-outline" href="https://github.com/ATAboukhadra/SurgeoNet">Code</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article class="project">
+						<div class="project-image">
+							<img src="images/ShapeGraFormer.png" alt="ShapeGraFormer">
+						</div>
+						<div class="project-info">
+							<div class="project-meta">
+								<span class="badge">IEEE Access 2024</span>
+								<span class="badge">Hand-Object Depth</span>
+							</div>
+							<h3>ShapeGraFormer: GraFormer-Based Network for Hand-Object Reconstruction from a Single
+								Depth Map</h3>
+							<p class="project-authors">Ahmed Tawfik Aboukhadra, Jameel Malik, Nadia Robertini, Ahmed Elhayek,
+								Didier Stricker</p>
+							<div class="project-actions">
+								<a class="btn" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10639406">Paper</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article class="project">
+						<div class="project-image">
+							<img src="images/thor.png" alt="THOR-Net">
+						</div>
+						<div class="project-info">
+							<div class="project-meta">
+								<span class="badge">WACV 2023</span>
+								<span class="badge">Self-supervised</span>
+							</div>
+							<h3>THOR-Net: End-to-end Graformer-based Realistic Two Hands and Object Reconstruction with
+								Self-supervision</h3>
+							<p class="project-authors">Ahmed Tawfik Aboukhadra, Jameel Malik, Ahmed Elhayek, Nadia Robertini,
+								Didier Stricker</p>
+							<div class="project-actions">
+								<a class="btn"
+									href="https://openaccess.thecvf.com/content/WACV2023/html/Aboukhadra_THOR-Net_End-to-End_Graformer-Based_Realistic_Two_Hands_and_Object_Reconstruction_With_WACV_2023_paper.html">Paper</a>
+								<a class="btn btn-outline" href="https://github.com/ATAboukhadra/THOR-Net">Code</a>
+							</div>
+						</div>
+					</article>
+				</li>
+			</ul>
+		</section>
+
+		<hr class="section-divider">
+
+		<section id="skills" class="section">
+			<h2>Skills</h2>
+			<div class="skills-progress">
+				<div class="skill">
+					<span class="skill-name">Python</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 90%"></div>
 					</div>
 				</div>
-			</li>
-
-			<li>
-				<div class="ed-info">
-					<div class="ed-logo"><img src="images/trophy.webp" alt="Award"></div>
-					<div>
-						<span class="exp-date">2017</span>
-						<span class="exp-position">ACPC Finalist</span>
-					</div>
-					<div>
-						<span class="exp-description">Finalist at Arab Collegiate Programming Contest (ACPC) 2017, 28th
-							Place.</span>
+				<div class="skill">
+					<span class="skill-name">PyTorch</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 90%"></div>
 					</div>
 				</div>
-			</li>
-		</ul>
+				<div class="skill">
+					<span class="skill-name">Deep Learning</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 80%"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span class="skill-name">Java</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 80%"></div>
+					</div>
+				</div>
+			</div>
 
+			<div class="skills-progress">
+				<div class="skill">
+					<span class="skill-name">OOP</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 80%"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span class="skill-name">Computer Vision</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 70%"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span class="skill-name">Git</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 70%"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span class="skill-name">SQL</span>
+					<div class="progress-bar">
+						<div class="progress" style="width: 60%"></div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<hr class="section-divider">
+
+		<section id="achievements" class="section">
+			<h2>Achievements</h2>
+			<ul>
+				<li>
+					<div class="ed-info">
+						<div class="ed-logo"><img src="images/trophy.webp" alt="Award"></div>
+						<div>
+							<span class="exp-date">2019</span>
+							<span class="exp-position">M.Sc. Scholarship</span>
+						</div>
+						<div>
+							<span class="exp-description">UM Holland High-Potential Scholarship Holder 2019. &#8364;58,000
+								grant to pursue a MSc in AI.</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="ed-info">
+						<div class="ed-logo"><img src="images/trophy.webp" alt="Award"></div>
+						<div>
+							<span class="exp-date">2017</span>
+							<span class="exp-position">ACPC Finalist</span>
+						</div>
+						<div>
+							<span class="exp-description">Finalist at Arab Collegiate Programming Contest (ACPC) 2017, 28th
+								Place.</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<footer class="site-footer">
+			<p>Contact: <a href="mailto:ahmed.tawfik96@gmail.com">ahmed.tawfik96@gmail.com</a> &middot; Last updated: 2026</p>
+		</footer>
 	</div>
+
+	<script>
+		const navLinks = document.querySelectorAll(".nav-link");
+		const sections = Array.from(document.querySelectorAll("section[id]"));
+		const offset = 120;
+
+		const setActiveLink = () => {
+			let activeId = sections[0] ? sections[0].id : "";
+			sections.forEach((section) => {
+				const rect = section.getBoundingClientRect();
+				if (rect.top <= offset && rect.bottom > offset) {
+					activeId = section.id;
+				}
+			});
+
+			navLinks.forEach((link) => {
+				link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+			});
+		};
+
+		setActiveLink();
+		window.addEventListener("scroll", () => window.requestAnimationFrame(setActiveLink));
+	</script>
+</body>
+
+</html>
