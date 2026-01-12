@@ -67,12 +67,14 @@ a:hover {
 }
 
 .profile-image {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .profile-image img {
-  max-width: 75%;
+  max-width: 92%;
   height: auto;
+  transform: scale(1.18);
+  transform-origin: center 20%;
   border-radius: 50%;
   border: 3px solid #333;
   box-shadow: 0 0 10px #333;
