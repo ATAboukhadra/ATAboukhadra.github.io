@@ -4,19 +4,96 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Ahmed Tawfik Aboukhadra - GitHub Profile</title>
+	<title>Ahmed Tawfik Aboukhadra - Researcher & PhD Student</title>
+	<meta name="description" content="Ahmed Tawfik Aboukhadra - Researcher at DFKI and PhD student at RPTU, specializing in hand-object pose estimation and 3D reconstruction using deep learning, GCNs, and transformers.">
+	<meta name="author" content="Ahmed Tawfik Aboukhadra">
+	<meta name="keywords" content="Computer Vision, Deep Learning, 3D Pose Estimation, Hand-Object Reconstruction, Machine Learning, AI Research, DFKI, RPTU">
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://ataboukhadra.github.io/">
+	<meta property="og:title" content="Ahmed Tawfik Aboukhadra - Researcher & PhD Student">
+	<meta property="og:description" content="Researcher at DFKI specializing in hand-object pose estimation and 3D reconstruction using deep learning.">
+	<meta property="og:image" content="https://ataboukhadra.github.io/images/photo.png">
+	
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://ataboukhadra.github.io/">
+	<meta property="twitter:title" content="Ahmed Tawfik Aboukhadra - Researcher & PhD Student">
+	<meta property="twitter:description" content="Researcher at DFKI specializing in hand-object pose estimation and 3D reconstruction using deep learning.">
+	<meta property="twitter:image" content="https://ataboukhadra.github.io/images/photo.png">
+	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
 	<meta name="google-site-verification" content="VhaWsI41aAz7ZXGHAcBkFmSBexoHgLPDpS01rtlxzA0" />
+	
+	<!-- JSON-LD Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Ahmed Tawfik Aboukhadra",
+		"jobTitle": "Researcher & PhD Student",
+		"affiliation": [
+			{
+				"@type": "Organization",
+				"name": "DFKI - German Research Center for Artificial Intelligence"
+			},
+			{
+				"@type": "Organization",
+				"name": "RPTU Kaiserslautern"
+			}
+		],
+		"alumniOf": [
+			{
+				"@type": "Organization",
+				"name": "Maastricht University"
+			},
+			{
+				"@type": "Organization",
+				"name": "German University in Cairo"
+			}
+		],
+		"email": "ahmed.tawfik96@gmail.com",
+		"url": "https://ataboukhadra.github.io",
+		"sameAs": [
+			"https://github.com/ATAboukhadra",
+			"https://www.linkedin.com/in/ahmed-tawfik-aboukhadra/",
+			"https://scholar.google.com/citations?user=VmkFR2UAAAAJ&hl=en"
+		]
+	}
+	</script>
 </head>
 
 <body>
 	<header class="site-header">
 		<nav class="site-nav">
+			<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+				<svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<circle cx="12" cy="12" r="5"/>
+					<line x1="12" y1="1" x2="12" y2="3"/>
+					<line x1="12" y1="21" x2="12" y2="23"/>
+					<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+					<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+					<line x1="1" y1="12" x2="3" y2="12"/>
+					<line x1="21" y1="12" x2="23" y2="12"/>
+					<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+				</svg>
+				<svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+				</svg>
+			</button>
+			<button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 			<ul>
 				<li><a class="nav-link" href="#experience">Experience</a></li>
 				<li><a class="nav-link" href="#education">Education</a></li>
@@ -24,6 +101,7 @@
 				<li><a class="nav-link" href="#publications">Publications</a></li>
 				<li><a class="nav-link" href="#skills">Skills</a></li>
 				<li><a class="nav-link" href="#achievements">Achievements</a></li>
+				<li><a class="nav-link" href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -72,6 +150,14 @@
 							</svg>
 						</a>
 					</div>
+					<a href="cv-ahmed-tawfik.pdf" class="btn btn-cv" download aria-label="Download CV">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; margin-right: 8px;">
+							<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+							<polyline points="7 10 12 15 17 10"/>
+							<line x1="12" y1="15" x2="12" y2="3"/>
+						</svg>
+						Download CV
+					</a>
 				</div>
 			</div>
 
@@ -102,9 +188,11 @@
 							<span class="exp-position">Researcher</span>
 						</div>
 						<div>
-							<div class="exp-logo"><img
-									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-									alt="Location"></div>
+						<div class="exp-logo">
+							<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+								<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+							</svg>
+						</div>
 							<span class="exp-company">Augmented Vision, DFKI</span>
 							<span class="exp-location">Kaiserslautern, Germany</span>
 						</div>
@@ -118,9 +206,11 @@
 							<span class="exp-position">M.Sc. Thesis</span>
 						</div>
 						<div>
-							<div class="exp-logo"><img
-									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-									alt="Location"></div>
+							<div class="exp-logo">
+								<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
 							<span class="exp-company">CISPA</span>
 							<span class="exp-location">Saarbruecken, Germany</span>
 						</div>
@@ -134,9 +224,11 @@
 							<span class="exp-position">ML Intern</span>
 						</div>
 						<div>
-							<div class="exp-logo"><img
-									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-									alt="Location"></div>
+							<div class="exp-logo">
+								<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
 							<span class="exp-company">HackerOne</span>
 							<span class="exp-location">Groningen, The Netherlands</span>
 						</div>
@@ -203,9 +295,11 @@
 							<span class="exp-position">Lecturer</span>
 						</div>
 						<div>
-							<div class="exp-logo"><img
-									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-									alt="Location"></div>
+							<div class="exp-logo">
+								<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
 							<span class="exp-company">RPTU</span>
 							<span class="exp-location">Kaiserslautern, Germany</span>
 						</div>
@@ -219,9 +313,11 @@
 							<span class="exp-position">Teaching Assistant</span>
 						</div>
 						<div>
-							<div class="exp-logo"><img
-									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-									alt="Location"></div>
+							<div class="exp-logo">
+								<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
 							<span class="exp-company">Maastricht University</span>
 							<span class="exp-location">Maastricht, The Netherlands</span>
 						</div>
@@ -234,9 +330,11 @@
 							<span class="exp-position">Teaching Assistant</span>
 						</div>
 						<div>
-							<div class="exp-logo"><img
-									src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png"
-									alt="Location"></div>
+							<div class="exp-logo">
+								<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
 							<span class="exp-company">German University in Cairo (GUC)</span>
 							<span class="exp-location">Cairo, Egypt</span>
 						</div>
@@ -250,11 +348,69 @@
 
 		<section id="publications" class="section">
 			<h2>Publications</h2>
-			<ul>
-				<li>
+			<div class="filter-container">
+				<button class="filter-btn active" data-filter="all">All</button>
+				<button class="filter-btn" data-filter="3d-pose">3D Pose</button>
+				<button class="filter-btn" data-filter="hand-object">Hand-Object</button>
+				<button class="filter-btn" data-filter="gcn">GCN</button>
+				<button class="filter-btn" data-filter="gaussian-splatting">Gaussian Splatting</button>
+			</div>
+			<ul id="publications-list">
+				<li class="publication-item" data-tags="hand-object 3d-pose gaussian-splatting">
 					<article class="project">
-						<div class="project-image">
-							<img src="images/SurgeoNet.jpg" alt="SurgeoNet">
+						<div class="project-gallery">
+							<div class="gallery-container">
+								<img src="images/GHOST1.png" alt="GHOST" class="gallery-image active">
+								<iframe src="images/GHOST2.pdf" class="gallery-image gallery-pdf" title="GHOST Results"></iframe>
+							</div>
+							<button class="gallery-nav gallery-prev" aria-label="Previous image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="15 18 9 12 15 6"></polyline>
+								</svg>
+							</button>
+							<button class="gallery-nav gallery-next" aria-label="Next image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="9 18 15 12 9 6"></polyline>
+								</svg>
+							</button>
+							<div class="gallery-indicators"></div>
+						</div>
+						<div class="project-info">
+							<div class="project-meta">
+								<span class="badge">CVPR (Submitted)</span>
+								<span class="badge">🏆 1st Place HANDS@ICCV25</span>
+								<span class="badge">Gaussian Splatting</span>
+							</div>
+							<h3>GHOST: Fast Category-agnostic Hand-Object Interaction Reconstruction from RGB Videos using Gaussian Splatting</h3>
+							<p class="project-authors">Ahmed Tawfik Aboukhadra, Marcel Rogge, Nadia Robertini, Abdalla Arafa, Jameel Malik, Ahmed Elhayek, Didier Stricker</p>
+							<p style="font-size: 0.9rem; color: var(--secondary); margin-top: 8px; margin-bottom: 12px;">🏆 1st-place solution in HANDS@ICCV25 workshop on ARCTIC Bi-CAIR benchmark</p>
+							<div class="project-actions">
+								<a class="btn" href="https://hands-workshop.org/files/2025/DFKI-AV.pdf">Technical Report</a>
+								<a class="btn btn-outline" href="https://github.com/ATAboukhadra/GHOST">Code</a>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="publication-item" data-tags="3d-pose gcn">
+					<article class="project">
+						<div class="project-gallery">
+							<div class="gallery-container">
+								<img src="images/SurgeoNet.jpg" alt="SurgeoNet" class="gallery-image active">
+								<!-- Add more images/GIFs here: -->
+								<!-- <img src="images/SurgeoNet-demo.gif" alt="SurgeoNet Demo" class="gallery-image"> -->
+								<!-- <img src="images/SurgeoNet-results.jpg" alt="SurgeoNet Results" class="gallery-image"> -->
+							</div>
+							<button class="gallery-nav gallery-prev" aria-label="Previous image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="15 18 9 12 15 6"></polyline>
+								</svg>
+							</button>
+							<button class="gallery-nav gallery-next" aria-label="Next image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="9 18 15 12 9 6"></polyline>
+								</svg>
+							</button>
+							<div class="gallery-indicators"></div>
 						</div>
 						<div class="project-info">
 							<div class="project-meta">
@@ -272,10 +428,26 @@
 						</div>
 					</article>
 				</li>
-				<li>
+				<li class="publication-item" data-tags="hand-object 3d-pose gcn">
 					<article class="project">
-						<div class="project-image">
-							<img src="images/ShapeGraFormer.png" alt="ShapeGraFormer">
+						<div class="project-gallery">
+							<div class="gallery-container">
+								<img src="images/ShapeGraFormer.png" alt="ShapeGraFormer" class="gallery-image active">
+								<!-- Add more images/GIFs here: -->
+								<!-- <img src="images/ShapeGraFormer-demo.gif" alt="ShapeGraFormer Demo" class="gallery-image"> -->
+								<!-- <img src="images/ShapeGraFormer-results.jpg" alt="ShapeGraFormer Results" class="gallery-image"> -->
+							</div>
+							<button class="gallery-nav gallery-prev" aria-label="Previous image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="15 18 9 12 15 6"></polyline>
+								</svg>
+							</button>
+							<button class="gallery-nav gallery-next" aria-label="Next image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="9 18 15 12 9 6"></polyline>
+								</svg>
+							</button>
+							<div class="gallery-indicators"></div>
 						</div>
 						<div class="project-info">
 							<div class="project-meta">
@@ -292,10 +464,26 @@
 						</div>
 					</article>
 				</li>
-				<li>
+				<li class="publication-item" data-tags="hand-object 3d-pose gcn">
 					<article class="project">
-						<div class="project-image">
-							<img src="images/thor.png" alt="THOR-Net">
+						<div class="project-gallery">
+							<div class="gallery-container">
+								<img src="images/thor.png" alt="THOR-Net" class="gallery-image active">
+								<!-- Add more images/GIFs here: -->
+								<!-- <img src="images/thor-demo.gif" alt="THOR-Net Demo" class="gallery-image"> -->
+								<!-- <img src="images/thor-results.jpg" alt="THOR-Net Results" class="gallery-image"> -->
+							</div>
+							<button class="gallery-nav gallery-prev" aria-label="Previous image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="15 18 9 12 15 6"></polyline>
+								</svg>
+							</button>
+							<button class="gallery-nav gallery-next" aria-label="Next image">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="9 18 15 12 9 6"></polyline>
+								</svg>
+							</button>
+							<div class="gallery-indicators"></div>
 						</div>
 						<div class="project-info">
 							<div class="project-meta">
@@ -411,12 +599,75 @@
 			</ul>
 		</section>
 
+		<hr class="section-divider">
+
+		<section id="contact" class="section">
+			<h2>Get in Touch</h2>
+			<p style="color: var(--muted); margin-bottom: 24px;">Feel free to reach out for collaborations, research opportunities, or just to say hello!</p>
+			<form id="contact-form" class="contact-form">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required aria-required="true">
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required aria-required="true">
+				</div>
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+				</div>
+				<button type="submit" class="btn">Send Message</button>
+				<p class="form-note" style="margin-top: 12px; font-size: 0.85rem; color: var(--muted);">
+					Note: This form currently uses a mailto: link. Consider integrating with a form service like Formspree or Netlify Forms for better functionality.
+				</p>
+			</form>
+		</section>
+
+		<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M12 19V5M5 12l7-7 7 7"/>
+			</svg>
+		</button>
+
 		<footer class="site-footer">
 			<p>Contact: <a href="mailto:ahmed.tawfik96@gmail.com">ahmed.tawfik96@gmail.com</a> &middot; Last updated: 2026</p>
 		</footer>
 	</div>
 
 	<script>
+		// Theme toggle
+		const themeToggle = document.getElementById('theme-toggle');
+		const html = document.documentElement;
+		
+		// Check for saved theme preference or default to light mode
+		const currentTheme = localStorage.getItem('theme') || 'light';
+		html.setAttribute('data-theme', currentTheme);
+		
+		themeToggle.addEventListener('click', () => {
+			const theme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+			html.setAttribute('data-theme', theme);
+			localStorage.setItem('theme', theme);
+		});
+
+		// Mobile menu toggle
+		const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+		const navUl = document.querySelector('.site-nav ul');
+		
+		mobileMenuToggle.addEventListener('click', () => {
+			mobileMenuToggle.classList.toggle('active');
+			navUl.classList.toggle('active');
+		});
+		
+		// Close mobile menu when a link is clicked
+		document.querySelectorAll('.site-nav a').forEach(link => {
+			link.addEventListener('click', () => {
+				mobileMenuToggle.classList.remove('active');
+				navUl.classList.remove('active');
+			});
+		});
+
+		// Active navigation highlighting
 		const navLinks = document.querySelectorAll(".nav-link");
 		const sections = Array.from(document.querySelectorAll("section[id]"));
 		const offset = 120;
@@ -437,6 +688,156 @@
 
 		setActiveLink();
 		window.addEventListener("scroll", () => window.requestAnimationFrame(setActiveLink));
+
+		// Back to top button
+		const backToTopButton = document.getElementById('back-to-top');
+		
+		window.addEventListener('scroll', () => {
+			if (window.pageYOffset > 300) {
+				backToTopButton.classList.add('visible');
+			} else {
+				backToTopButton.classList.remove('visible');
+			}
+		});
+		
+		backToTopButton.addEventListener('click', () => {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+
+		// Publication filters
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const publications = document.querySelectorAll('.publication-item');
+		
+		filterButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				// Update active button
+				filterButtons.forEach(btn => btn.classList.remove('active'));
+				button.classList.add('active');
+				
+				const filter = button.getAttribute('data-filter');
+				
+				publications.forEach(pub => {
+					if (filter === 'all') {
+						pub.classList.remove('hidden');
+					} else {
+						const tags = pub.getAttribute('data-tags');
+						if (tags && tags.includes(filter)) {
+							pub.classList.remove('hidden');
+						} else {
+							pub.classList.add('hidden');
+						}
+					}
+				});
+			});
+		});
+
+		// Simple Analytics (privacy-respecting placeholder)
+		// Replace with your analytics code if needed
+		console.log('Page loaded successfully');
+
+		// Gallery functionality
+		function initGalleries() {
+			const galleries = document.querySelectorAll('.project-gallery');
+			
+			galleries.forEach(gallery => {
+				const images = gallery.querySelectorAll('.gallery-image');
+				const prevBtn = gallery.querySelector('.gallery-prev');
+				const nextBtn = gallery.querySelector('.gallery-next');
+				const indicatorsContainer = gallery.querySelector('.gallery-indicators');
+				
+				// Only show navigation if there are multiple images
+				if (images.length <= 1) {
+					prevBtn.style.display = 'none';
+					nextBtn.style.display = 'none';
+					return;
+				}
+				
+				let currentIndex = 0;
+				
+				// Create indicators
+				images.forEach((_, index) => {
+					const indicator = document.createElement('button');
+					indicator.classList.add('gallery-indicator');
+					indicator.setAttribute('aria-label', `Go to image ${index + 1}`);
+					if (index === 0) indicator.classList.add('active');
+					indicator.addEventListener('click', () => goToSlide(index));
+					indicatorsContainer.appendChild(indicator);
+				});
+				
+				const indicators = indicatorsContainer.querySelectorAll('.gallery-indicator');
+				
+				function updateGallery() {
+					images.forEach((img, index) => {
+						img.classList.toggle('active', index === currentIndex);
+					});
+					indicators.forEach((indicator, index) => {
+						indicator.classList.toggle('active', index === currentIndex);
+					});
+				}
+				
+				function goToSlide(index) {
+					currentIndex = index;
+					updateGallery();
+				}
+				
+				function nextSlide() {
+					currentIndex = (currentIndex + 1) % images.length;
+					updateGallery();
+				}
+				
+				function prevSlide() {
+					currentIndex = (currentIndex - 1 + images.length) % images.length;
+					updateGallery();
+				}
+				
+				prevBtn.addEventListener('click', prevSlide);
+				nextBtn.addEventListener('click', nextSlide);
+				
+				// Keyboard navigation
+				gallery.addEventListener('keydown', (e) => {
+					if (e.key === 'ArrowLeft') prevSlide();
+					if (e.key === 'ArrowRight') nextSlide();
+				});
+				
+				// Touch swipe support
+				let touchStartX = 0;
+				let touchEndX = 0;
+				
+				gallery.addEventListener('touchstart', (e) => {
+					touchStartX = e.changedTouches[0].screenX;
+				});
+				
+				gallery.addEventListener('touchend', (e) => {
+					touchEndX = e.changedTouches[0].screenX;
+					handleSwipe();
+				});
+				
+				function handleSwipe() {
+					if (touchEndX < touchStartX - 50) nextSlide();
+					if (touchEndX > touchStartX + 50) prevSlide();
+				}
+			});
+		}
+		
+		// Initialize galleries after DOM is ready
+		initGalleries();
+
+		// Contact form handler (simple mailto for now)
+		const contactForm = document.getElementById('contact-form');
+		contactForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const message = document.getElementById('message').value;
+			
+			const subject = encodeURIComponent(`Contact from ${name}`);
+			const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+			
+			window.location.href = `mailto:ahmed.tawfik96@gmail.com?subject=${subject}&body=${body}`;
+		});
 	</script>
 </body>
 
