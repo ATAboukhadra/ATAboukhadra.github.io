@@ -30,6 +30,8 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+	<!-- 3D Model Viewer -->
+	<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 	<meta name="google-site-verification" content="VhaWsI41aAz7ZXGHAcBkFmSBexoHgLPDpS01rtlxzA0" />
 	
 	<!-- JSON-LD Structured Data -->
@@ -71,24 +73,15 @@
 </head>
 
 <body>
+	<!-- Floating decorative shapes -->
+	<div class="floating-shapes">
+		<div class="floating-shape"></div>
+		<div class="floating-shape"></div>
+		<div class="floating-shape"></div>
+	</div>
+
 	<header class="site-header">
 		<nav class="site-nav">
-			<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-				<svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<circle cx="12" cy="12" r="5"/>
-					<line x1="12" y1="1" x2="12" y2="3"/>
-					<line x1="12" y1="21" x2="12" y2="23"/>
-					<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-					<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-					<line x1="1" y1="12" x2="3" y2="12"/>
-					<line x1="21" y1="12" x2="23" y2="12"/>
-					<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-				</svg>
-				<svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
-					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-				</svg>
-			</button>
 			<button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
 				<span></span>
 				<span></span>
@@ -110,11 +103,32 @@
 	<div class="container">
 		<section class="intro-section">
 			<div class="profile-info">
-				<div class="profile-image">
-					<img src="images/photo.png" alt="Profile Picture">
+				<div class="profile-visuals">
+					<div class="profile-image">
+						<img src="images/photo.png" alt="Ahmed Tawfik Aboukhadra">
+					</div>
+					<div class="avatar-viewer-container">
+						<model-viewer
+							src="avatars/model.glb"
+							alt="Ahmed Tawfik Aboukhadra 3D Avatar"
+							camera-controls
+							disable-zoom
+							interaction-prompt="none"
+							camera-orbit="0deg 75deg 3.5m"
+							min-camera-orbit="auto 45deg auto"
+							max-camera-orbit="auto 110deg auto"
+							environment-image="neutral"
+							shadow-intensity="0.5"
+							autoplay
+							animation-crossfade-duration="0.3"
+						></model-viewer>
+					</div>
 				</div>
 				<div class="profile-intro">
 					<h1>Ahmed Tawfik Aboukhadra</h1>
+					<div class="typing-subtitle">
+						<span id="typed-text"></span><span class="cursor">|</span>
+					</div>
 					<p>I'm a Researcher at the <a
 							href="https://www.dfki.de/web/forschung/forschungsbereiche/erweiterte-realitaet">Augmented
 							Vision department at DFKI</a> and a PhD student at <a
@@ -174,6 +188,25 @@
 				<div class="highlight-card">
 					<span class="highlight-label">Current</span>
 					<p>Researcher at DFKI AV and PhD student at RPTU, Kaiserslautern.</p>
+				</div>
+			</div>
+
+			<div class="stats-bar">
+				<div class="stat-item">
+					<span class="stat-number" data-target="4">0</span>
+					<span class="stat-label">Publications</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number" data-target="4">0</span>
+					<span class="stat-label">Years Research</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number" data-target="1">0</span>
+					<span class="stat-label">1st Place Awards</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number" data-target="3">0</span>
+					<span class="stat-label">Countries</span>
 				</div>
 			</div>
 		</section>
@@ -362,7 +395,7 @@
 						<div class="project-gallery">
 							<div class="gallery-container">
 								<img src="images/GHOST1.png" alt="GHOST" class="gallery-image active">
-								<iframe src="images/GHOST2.pdf" class="gallery-image gallery-pdf" title="GHOST Results"></iframe>
+								<!-- <iframe src="images/GHOST2.pdf" class="gallery-image gallery-pdf" title="GHOST Results"></iframe> -->
 							</div>
 							<button class="gallery-nav gallery-prev" aria-label="Previous image">
 								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -709,21 +742,86 @@
 	</div>
 
 	<script>
-		// Theme toggle
-		const themeToggle = document.getElementById('theme-toggle');
-		const html = document.documentElement;
-		
-		// Check for saved theme preference or default to light mode
-		const currentTheme = localStorage.getItem('theme') || 'light';
-		html.setAttribute('data-theme', currentTheme);
-		
-		themeToggle.addEventListener('click', () => {
-			const theme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-			html.setAttribute('data-theme', theme);
-			localStorage.setItem('theme', theme);
+		// ===== Typing Animation =====
+		const phrases = [
+			'3D Computer Vision Researcher',
+			'PhD Student at RPTU',
+			'Deep Learning Enthusiast',
+			'Hand-Object Reconstruction',
+			'GCNs & Transformers'
+		];
+		let phraseIndex = 0;
+		let charIndex = 0;
+		let isDeleting = false;
+		const typedText = document.getElementById('typed-text');
+
+		function typeEffect() {
+			const current = phrases[phraseIndex];
+			if (isDeleting) {
+				typedText.textContent = current.substring(0, charIndex - 1);
+				charIndex--;
+			} else {
+				typedText.textContent = current.substring(0, charIndex + 1);
+				charIndex++;
+			}
+
+			let delay = isDeleting ? 40 : 80;
+
+			if (!isDeleting && charIndex === current.length) {
+				delay = 2000;
+				isDeleting = true;
+			} else if (isDeleting && charIndex === 0) {
+				isDeleting = false;
+				phraseIndex = (phraseIndex + 1) % phrases.length;
+				delay = 400;
+			}
+
+			setTimeout(typeEffect, delay);
+		}
+		typeEffect();
+
+		// ===== Scroll-triggered section animations =====
+		const sectionObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+		document.querySelectorAll('.section').forEach(section => {
+			sectionObserver.observe(section);
 		});
 
-		// Mobile menu toggle
+		// ===== Counter animation for stats =====
+		const counterObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const counters = entry.target.querySelectorAll('.stat-number');
+					counters.forEach(counter => {
+						const target = parseInt(counter.getAttribute('data-target'));
+						const duration = 1500;
+						const step = target / (duration / 30);
+						let current = 0;
+						const timer = setInterval(() => {
+							current += step;
+							if (current >= target) {
+								counter.textContent = target + '+';
+								clearInterval(timer);
+							} else {
+								counter.textContent = Math.floor(current);
+							}
+						}, 30);
+					});
+					counterObserver.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.5 });
+
+		const statsBar = document.querySelector('.stats-bar');
+		if (statsBar) counterObserver.observe(statsBar);
+
+		// ===== Mobile menu toggle =====
 		const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 		const navUl = document.querySelector('.site-nav ul');
 		
@@ -732,7 +830,6 @@
 			navUl.classList.toggle('active');
 		});
 		
-		// Close mobile menu when a link is clicked
 		document.querySelectorAll('.site-nav a').forEach(link => {
 			link.addEventListener('click', () => {
 				mobileMenuToggle.classList.remove('active');
@@ -740,7 +837,7 @@
 			});
 		});
 
-		// Active navigation highlighting
+		// ===== Active navigation highlighting =====
 		const navLinks = document.querySelectorAll(".nav-link");
 		const sections = Array.from(document.querySelectorAll("section[id]"));
 		const offset = 120;
@@ -762,7 +859,7 @@
 		setActiveLink();
 		window.addEventListener("scroll", () => window.requestAnimationFrame(setActiveLink));
 
-		// Back to top button
+		// ===== Back to top button =====
 		const backToTopButton = document.getElementById('back-to-top');
 		
 		window.addEventListener('scroll', () => {
@@ -774,19 +871,15 @@
 		});
 		
 		backToTopButton.addEventListener('click', () => {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			});
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 		});
 
-		// Publication filters
+		// ===== Publication filters =====
 		const filterButtons = document.querySelectorAll('.filter-btn');
 		const publications = document.querySelectorAll('.publication-item');
 		
 		filterButtons.forEach(button => {
 			button.addEventListener('click', () => {
-				// Update active button
 				filterButtons.forEach(btn => btn.classList.remove('active'));
 				button.classList.add('active');
 				
@@ -806,10 +899,6 @@
 				});
 			});
 		});
-
-		// Simple Analytics (privacy-respecting placeholder)
-		// Replace with your analytics code if needed
-		console.log('Page loaded successfully');
 
 		// Gallery functionality
 		function initGalleries() {
