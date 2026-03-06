@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d1f3c"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="480" height="270" fill="url(#bg2)"/>
+
+  <!-- Phone frame -->
+  <rect x="30" y="10" width="160" height="250" rx="16" fill="#1a2744" stroke="#2a3a60" stroke-width="1.5"/>
+  <rect x="38" y="25" width="144" height="224" rx="8" fill="#0f1d35"/>
+  <!-- Phone notch -->
+  <rect x="85" y="13" width="50" height="8" rx="4" fill="#0f1d35"/>
+
+  <!-- Telegram header -->
+  <rect x="38" y="25" width="144" height="30" rx="8" fill="#1a2a4a"/>
+  <rect x="38" y="43" width="144" height="12" fill="#1a2a4a"/>
+  <circle cx="55" cy="40" r="10" fill="#2196F3"/>
+  <text x="55" y="44" text-anchor="middle" font-family="sans-serif" font-size="9" fill="white" font-weight="bold">M</text>
+  <text x="72" y="37" font-family="sans-serif" font-size="8" fill="white" font-weight="bold">Memo AI</text>
+  <text x="72" y="48" font-family="sans-serif" font-size="7" fill="#64b5f6">online</text>
+
+  <!-- Chat bubbles -->
+  <rect x="42" y="62" width="110" height="22" rx="10" fill="#1e3a5f"/>
+  <text x="97" y="71" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#90caf9">🎤 Voice note (0:23)</text>
+  <text x="97" y="80" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#4a6080">14:32</text>
+
+  <rect x="68" y="90" width="108" height="32" rx="10" fill="#1565c0"/>
+  <text x="122" y="102" text-anchor="middle" font-family="sans-serif" font-size="7" fill="white">📋 3 tasks extracted:</text>
+  <text x="122" y="114" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#90caf9">• Call dentist Friday</text>
+
+  <rect x="42" y="130" width="100" height="22" rx="10" fill="#1e3a5f"/>
+  <text x="92" y="145" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#90caf9">Who is Sarah?</text>
+
+  <rect x="60" y="160" width="118" height="42" rx="10" fill="#1565c0"/>
+  <text x="119" y="172" text-anchor="middle" font-family="sans-serif" font-size="7" fill="white">Sarah: colleague at DFKI,</text>
+  <text x="119" y="182" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#90caf9">mentioned 14x this month.</text>
+  <text x="119" y="192" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#64b5f6">Last: "project meeting"</text>
+
+  <!-- Input bar -->
+  <rect x="42" y="212" width="122" height="18" rx="9" fill="#1a2a4a" stroke="#2a3a60" stroke-width="1"/>
+  <text x="57" y="224" font-family="sans-serif" font-size="7" fill="#4a6080">Send message or 🎤</text>
+
+  <!-- Right panel: Architecture -->
+  <rect x="205" y="10" width="265" height="250" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="337" y="32" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e5e7eb" font-weight="bold">System Architecture</text>
+
+  <!-- Architecture boxes -->
+  <rect x="220" y="45" width="80" height="28" rx="6" fill="#1e3a5f" stroke="#2563eb" stroke-width="1"/>
+  <text x="260" y="57" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#60a5fa">Telegram Bot</text>
+  <text x="260" y="68" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#3b82f6">voice/text</text>
+
+  <rect x="355" y="45" width="80" height="28" rx="6" fill="#1e3a5f" stroke="#2563eb" stroke-width="1"/>
+  <text x="395" y="57" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#60a5fa">Web UI</text>
+  <text x="395" y="68" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#3b82f6">FastAPI</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="73" x2="300" y2="93" stroke="#374151" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="395" y1="73" x2="395" y2="93" stroke="#374151" stroke-width="1"/>
+  <line x1="300" y1="93" x2="395" y2="93" stroke="#374151" stroke-width="1"/>
+
+  <rect x="260" y="100" width="90" height="28" rx="6" fill="#1e3857" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="305" y="112" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#93c5fd">LLM Intent Router</text>
+  <text x="305" y="122" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#3b82f6">Gemini</text>
+
+  <line x1="305" y1="128" x2="305" y2="145" stroke="#374151" stroke-width="1"/>
+
+  <rect x="215" y="148" width="85" height="24" rx="6" fill="#1e3a5f" stroke="#7c3aed" stroke-width="1"/>
+  <text x="257" y="163" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#c4b5fd">ChromaDB Memory</text>
+
+  <rect x="315" y="148" width="85" height="24" rx="6" fill="#1e3a5f" stroke="#059669" stroke-width="1"/>
+  <text x="357" y="163" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#6ee7b7">Celery Tasks</text>
+
+  <rect x="215" y="185" width="85" height="24" rx="6" fill="#1e3a5f" stroke="#d97706" stroke-width="1"/>
+  <text x="257" y="200" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#fcd34d">Whisper ASR</text>
+
+  <rect x="315" y="185" width="85" height="24" rx="6" fill="#1e3a5f" stroke="#dc2626" stroke-width="1"/>
+  <text x="357" y="200" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#fca5a5">Redis Queue</text>
+
+  <text x="337" y="232" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#4b5563">Telegram · FastAPI · Celery · Redis · ChromaDB · Gemini</text>
+  <text x="337" y="248" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6366f1">Voice → Transcribe → Route → Respond → Remember</text>
+</svg>

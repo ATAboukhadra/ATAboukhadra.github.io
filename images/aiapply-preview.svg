@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="270" fill="url(#bg3)"/>
+
+  <!-- Browser window -->
+  <rect x="12" y="12" width="456" height="246" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="12" y="12" width="456" height="36" rx="10" fill="#0f172a"/>
+  <rect x="12" y="36" width="456" height="12" fill="#0f172a"/>
+  <!-- Browser controls -->
+  <circle cx="30" cy="30" r="5" fill="#ff5f57"/>
+  <circle cx="46" cy="30" r="5" fill="#ffbd2e"/>
+  <circle cx="62" cy="30" r="5" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="80" y="22" width="300" height="16" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="230" y="33" text-anchor="middle" font-family="monospace" font-size="8" fill="#64748b">localhost:5000/dashboard</text>
+
+  <!-- Sidebar -->
+  <rect x="12" y="48" width="100" height="210" fill="#0f172a"/>
+  <text x="62" y="68" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6366f1" font-weight="bold">AI Apply</text>
+  <rect x="18" y="76" width="88" height="22" rx="6" fill="#1e40af"/>
+  <text x="62" y="91" text-anchor="middle" font-family="sans-serif" font-size="8" fill="white">📋 Dashboard</text>
+  <text x="62" y="115" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#64748b">🔍 Scrape</text>
+  <text x="62" y="135" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#64748b">⭐ Saved</text>
+  <text x="62" y="155" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#64748b">📤 Export</text>
+  <text x="62" y="175" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#64748b">⚙️ Profile</text>
+
+  <!-- Stats bar -->
+  <rect x="125" y="52" width="60" height="36" rx="6" fill="#1e3a5f"/>
+  <text x="155" y="66" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#60a5fa" font-weight="bold">847</text>
+  <text x="155" y="80" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#64748b">Jobs Found</text>
+
+  <rect x="195" y="52" width="60" height="36" rx="6" fill="#1e3a2e"/>
+  <text x="225" y="66" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4ade80" font-weight="bold">42</text>
+  <text x="225" y="80" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#64748b">High Match</text>
+
+  <rect x="265" y="52" width="60" height="36" rx="6" fill="#2d1b69"/>
+  <text x="295" y="66" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a78bfa" font-weight="bold">7</text>
+  <text x="295" y="80" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#64748b">Applied</text>
+
+  <rect x="335" y="52" width="60" height="36" rx="6" fill="#3d1515"/>
+  <text x="365" y="66" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#f87171" font-weight="bold">156</text>
+  <text x="365" y="80" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#64748b">Hidden</text>
+
+  <!-- Job list header -->
+  <text x="135" y="107" font-family="sans-serif" font-size="9" fill="#94a3b8" font-weight="bold">TOP MATCHES</text>
+
+  <!-- Job cards -->
+  <rect x="125" y="113" width="335" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="125" y="113" width="4" height="36" rx="2" fill="#4ade80"/>
+  <text x="138" y="127" font-family="sans-serif" font-size="9" fill="white" font-weight="bold">Senior CV Engineer</text>
+  <text x="138" y="140" font-family="sans-serif" font-size="7" fill="#64748b">Meta AI · Berlin, Germany · Remote OK</text>
+  <rect x="390" y="119" width="62" height="16" rx="8" fill="#166534"/>
+  <text x="421" y="130" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4ade80" font-weight="bold">92% match</text>
+
+  <rect x="125" y="155" width="335" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="125" y="155" width="4" height="36" rx="2" fill="#60a5fa"/>
+  <text x="138" y="169" font-family="sans-serif" font-size="9" fill="white" font-weight="bold">ML Research Scientist</text>
+  <text x="138" y="182" font-family="sans-serif" font-size="7" fill="#64748b">Google DeepMind · London, UK · Hybrid</text>
+  <rect x="390" y="161" width="62" height="16" rx="8" fill="#1e3a5f"/>
+  <text x="421" y="172" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#60a5fa" font-weight="bold">87% match</text>
+
+  <rect x="125" y="197" width="335" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="125" y="197" width="4" height="36" rx="2" fill="#a78bfa"/>
+  <text x="138" y="211" font-family="sans-serif" font-size="9" fill="white" font-weight="bold">3D Reconstruction Engineer</text>
+  <text x="138" y="224" font-family="sans-serif" font-size="7" fill="#64748b">Toyota Research · Munich · Onsite</text>
+  <rect x="390" y="203" width="62" height="16" rx="8" fill="#2d1b69"/>
+  <text x="421" y="214" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#a78bfa" font-weight="bold">81% match</text>
+
+  <!-- Source badges -->
+  <text x="135" y="248" font-family="sans-serif" font-size="7" fill="#4b5563">Sources:</text>
+  <rect x="170" y="238" width="44" height="14" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="192" y="249" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#60a5fa">LinkedIn</text>
+  <rect x="220" y="238" width="36" height="14" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="238" y="249" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#f59e0b">Indeed</text>
+  <rect x="262" y="238" width="44" height="14" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="284" y="249" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#a78bfa">Adzuna</text>
+  <text x="315" y="249" font-family="sans-serif" font-size="7" fill="#4b5563">+4 more</text>
+</svg>

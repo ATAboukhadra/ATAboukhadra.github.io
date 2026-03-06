@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a0a"/>
+      <stop offset="100%" stop-color="#0d2b0d"/>
+    </linearGradient>
+    <linearGradient id="pitch" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#166534"/>
+      <stop offset="50%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="270" fill="url(#bg4)"/>
+
+  <!-- Football pitch mini -->
+  <rect x="12" y="12" width="210" height="130" rx="8" fill="url(#pitch)" stroke="#4ade80" stroke-width="1.5"/>
+  <!-- Pitch lines -->
+  <rect x="12" y="12" width="210" height="130" rx="8" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+  <line x1="117" y1="12" x2="117" y2="142" stroke="#4ade80" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="117" cy="77" r="15" fill="none" stroke="#4ade80" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="117" cy="77" r="2" fill="#4ade80" stroke-opacity="0.5"/>
+  <!-- Goals -->
+  <rect x="12" y="57" width="15" height="40" fill="none" stroke="#4ade80" stroke-width="0.8"/>
+  <rect x="207" y="57" width="15" height="40" fill="none" stroke="#4ade80" stroke-width="0.8"/>
+
+  <!-- Audio waveform overlay -->
+  <text x="117" y="28" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4ade80" font-weight="bold">T30 Mazad</text>
+  <!-- Waveform bars -->
+  <rect x="40" y="90" width="3" height="20" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="45" y="82" width="3" height="36" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="50" y="86" width="3" height="28" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="55" y="78" width="3" height="44" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="60" y="84" width="3" height="32" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="65" y="92" width="3" height="16" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="70" y="80" width="3" height="40" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="75" y="88" width="3" height="24" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="80" y="75" width="3" height="50" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="85" y="82" width="3" height="36" rx="1" fill="#4ade80" opacity="0.8"/>
+
+  <!-- Terminal -->
+  <rect x="12" y="152" width="210" height="108" rx="8" fill="#0d1f0d" stroke="#1a3a1a" stroke-width="1"/>
+  <text x="22" y="168" font-family="monospace" font-size="7.5" fill="#4ade80">$ python src/cli.py audio.wav</text>
+  <text x="22" y="182" font-family="monospace" font-size="7.5" fill="#4ade80">"Did they all play for Barcelona?"</text>
+  <text x="22" y="196" font-family="monospace" font-size="7.5" fill="#64748b">🎤 Transcribing audio...</text>
+  <text x="22" y="210" font-family="monospace" font-size="7.5" fill="#60a5fa">📋 Detected: Messi, Xavi, Puyol</text>
+  <text x="22" y="224" font-family="monospace" font-size="7.5" fill="#60a5fa">   Iniesta, Pique, Busquets</text>
+  <text x="22" y="238" font-family="monospace" font-size="7.5" fill="#4ade80">✓ ANSWER: Yes, all 6 played</text>
+  <text x="22" y="251" font-family="monospace" font-size="7.5" fill="#4ade80">  for FC Barcelona</text>
+
+  <!-- Right panel: System diagram -->
+  <rect x="235" y="12" width="233" height="246" rx="10" fill="#0f1f0f" stroke="#1a3a1a" stroke-width="1"/>
+  <text x="351" y="32" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4ade80" font-weight="bold">Pipeline</text>
+
+  <!-- Pipeline steps -->
+  <rect x="255" y="42" width="193" height="26" rx="6" fill="#1a3a1a" stroke="#4ade80" stroke-width="1"/>
+  <text x="351" y="53" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4ade80">🎤 Audio Input</text>
+  <text x="351" y="63" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#16a34a">.wav / .mp3 file</text>
+
+  <line x1="351" y1="68" x2="351" y2="80" stroke="#166534" stroke-width="1.5"/>
+
+  <rect x="255" y="80" width="193" height="26" rx="6" fill="#1a3a1a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="351" y="91" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#60a5fa">🔊 Whisper ASR</text>
+  <text x="351" y="101" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#3b82f6">biased with player names</text>
+
+  <line x1="351" y1="106" x2="351" y2="118" stroke="#166534" stroke-width="1.5"/>
+
+  <rect x="255" y="118" width="193" height="26" rx="6" fill="#1a3a1a" stroke="#a78bfa" stroke-width="1"/>
+  <text x="351" y="129" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#a78bfa">🔍 Name Matcher</text>
+  <text x="351" y="139" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#7c3aed">Wikidata + FBref DB</text>
+
+  <line x1="351" y1="144" x2="351" y2="156" stroke="#166534" stroke-width="1.5"/>
+
+  <rect x="255" y="156" width="193" height="26" rx="6" fill="#1a3a1a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="351" y="167" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#f59e0b">✅ Constraint Checker</text>
+  <text x="351" y="177" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#d97706">rule-based or LLM</text>
+
+  <line x1="351" y1="182" x2="351" y2="194" stroke="#166534" stroke-width="1.5"/>
+
+  <rect x="255" y="194" width="193" height="26" rx="6" fill="#1a3a1a" stroke="#4ade80" stroke-width="1"/>
+  <text x="351" y="205" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#4ade80">📊 Answer + Justification</text>
+  <text x="351" y="215" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#16a34a">JSON output</text>
+
+  <!-- Tag cloud at bottom -->
+  <text x="255" y="238" font-family="sans-serif" font-size="7" fill="#166534">Whisper</text>
+  <text x="305" y="238" font-family="sans-serif" font-size="7" fill="#166534">·</text>
+  <text x="312" y="238" font-family="sans-serif" font-size="7" fill="#166534">Wikidata</text>
+  <text x="360" y="238" font-family="sans-serif" font-size="7" fill="#166534">·</text>
+  <text x="367" y="238" font-family="sans-serif" font-size="7" fill="#166534">FBref</text>
+  <text x="255" y="252" font-family="sans-serif" font-size="7" fill="#166534">NLP · ASR Biasing · Sports Intelligence</text>
+</svg>
