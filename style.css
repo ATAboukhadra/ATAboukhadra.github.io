@@ -755,7 +755,7 @@ ul {
   width: 100%;
   overflow: hidden;
   border-radius: 14px;
-  background: rgba(79, 70, 229, 0.03);
+  background: #ffffff;
 }
 
 .gallery-container {
@@ -1371,6 +1371,10 @@ ul {
 
 [data-theme="dark"] .site-header {
   background: rgba(15, 17, 26, 0.88);
+}
+
+[data-theme="dark"] .project-gallery {
+  background: #ffffff;
 }
 
 /* ===== Theme Picker ===== */
