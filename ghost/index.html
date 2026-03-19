@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GHOST - Gaussian Hand-Object Splatting</title>
+    <meta name="description" content="GHOST: Fast Category-agnostic Hand-Object Interaction Reconstruction from RGB Videos using Gaussian Splatting">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: #ffffff;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            padding: 60px 0 20px;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a2e;
+        }
+
+        .venue-badge {
+            display: inline-block;
+            background: #4f46e5;
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .award-badge {
+            display: inline-block;
+            background: #f59e0b;
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-left: 8px;
+        }
+
+        .authors {
+            font-size: 1.25rem;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        .affiliations {
+            font-size: 1.05rem;
+            color: #777;
+            margin-bottom: 24px;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .paper-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .paper-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background: #4f46e5;
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: #fff;
+            color: #4f46e5;
+            border: 2px solid #4f46e5;
+        }
+
+        .btn-dark {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 48px;
+        }
+
+        section h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+            color: #1a1a2e;
+        }
+
+        /* Abstract */
+        .abstract {
+            font-size: 1.15rem;
+            color: #333;
+            text-align: justify;
+        }
+
+        /* GIF Grid */
+        .gif-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .gif-grid .row-label {
+            grid-column: 1 / -1;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4f46e5;
+            padding: 8px 0 2px;
+            text-align: center;
+        }
+
+        .gif-cell {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #f5f5f5;
+        }
+
+        .gif-cell img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .gif-cell .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 3px 0;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* Qualitative grid */
+        .quali-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .quali-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        /* Pipeline figure */
+        .figure-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .figure-container img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .figure-container .caption {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 12px 0 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #1a1a2e;
+            border-bottom: 2px solid #d1d5db;
+        }
+
+        td.best {
+            font-weight: 700;
+            color: #059669;
+        }
+
+        td.second {
+            color: #d97706;
+        }
+
+        tr:hover {
+            background: #f9fafb;
+        }
+
+        /* Teaser */
+        .teaser-container {
+            text-align: center;
+            margin: 0 0 32px;
+        }
+
+        .teaser-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 16px 0;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Citation */
+        .citation-block {
+            position: relative;
+            background: #f8f9fa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px 24px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: #333;
+            margin-top: 12px;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4f46e5;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .copy-btn:hover {
+            background: #4338ca;
+        }
+
+        .copy-btn.copied {
+            background: #059669;
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.95rem;
+            color: #999;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .gif-grid { grid-template-columns: repeat(2, 1fr); }
+            .authors { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; Back to profile</a>
+
+        <header class="page-header">
+            <div>
+                <span class="venue-badge">CVPR Findings 2026</span>
+                <span class="award-badge">1st Place HANDS@ICCV25</span>
+            </div>
+            <h1>GHOST: Fast Category-agnostic Hand-Object Interaction Reconstruction from RGB Videos using Gaussian Splatting</h1>
+            <p class="authors">
+                <strong>Ahmed Tawfik Aboukhadra</strong><sup>1,2</sup>,
+                Marcel Rogge<sup>1,2</sup>,
+                Nadia Robertini<sup>2</sup>,
+                Abdalla Arafa<sup>1,2</sup>,
+                Jameel Malik<sup>4</sup>,
+                Ahmed Elhayek<sup>3</sup>,
+                Didier Stricker<sup>1,2</sup>
+            </p>
+            <p class="affiliations">
+                <sup>1</sup>RPTU &nbsp;
+                <sup>2</sup>DFKI-AV Kaiserslautern &nbsp;
+                <sup>3</sup>UPM Saudi Arabia &nbsp;
+                <sup>4</sup>NUST-SEECS Pakistan
+            </p>
+            <div class="paper-links">
+                <a class="btn-primary" href="https://hands-workshop.org/files/2025/DFKI-AV.pdf">Technical Report</a>
+                <a class="btn-dark" href="https://github.com/ATAboukhadra/GHOST">Code</a>
+            </div>
+        </header>
+
+        <!-- Teaser -->
+        <div class="teaser-container">
+            <img src="teaser.png" alt="GHOST teaser showing hand-object reconstructions">
+        </div>
+
+        <!-- Abstract -->
+        <section>
+            <h2>Abstract</h2>
+            <p class="abstract">
+                Understanding realistic hand-object interactions from monocular RGB videos is essential for AR/VR, robotics, and embodied AI.
+                Existing methods rely on category-specific templates or heavy computation, yet still produce physically inconsistent hand-object alignment in 3D.
+                We introduce <strong>GHOST</strong> (<em>Gaussian Hand-Object Splatting</em>), a fast, category-agnostic framework for reconstructing dynamic hand-object interactions using 2D Gaussian Splatting.
+                GHOST represents both hands and objects as dense, view-consistent Gaussian discs and introduces three key innovations:
+                (1) a geometric-prior retrieval and consistency loss that completes occluded object regions,
+                (2) a grasp-aware alignment that refines hand translations and object scale to ensure realistic contact, and
+                (3) a hand-aware background loss that prevents penalizing hand-occluded object regions.
+                GHOST achieves complete, physically consistent, and animatable reconstructions from a single RGB video while running an order of magnitude faster than prior category-agnostic methods.
+                Extensive experiments on ARCTIC, HO3D, and in-the-wild datasets demonstrate state-of-the-art accuracy in 3D reconstruction and 2D rendering quality.
+            </p>
+        </section>
+
+        <!-- Results GIFs -->
+        <section>
+            <h2>Results</h2>
+            <div class="gif-grid">
+                <div class="row-label">Input Video</div>
+                <div class="gif-cell" style="animation-delay: 0s;">
+                    <img src="gifs/drill_sq.gif" alt="Drill input video" class="staggered-gif" data-delay="0">
+                    <div class="label">Drill</div>
+                </div>
+                <div class="gif-cell">
+                    <img src="gifs/mixer.gif" alt="Mixer input video" class="staggered-gif" data-delay="1500">
+                    <div class="label">Mixer</div>
+                </div>
+                <div class="gif-cell">
+                    <img src="gifs/mug_sq.gif" alt="Mug input video" class="staggered-gif" data-delay="3000">
+                    <div class="label">Mug</div>
+                </div>
+                <div class="gif-cell">
+                    <img src="gifs/waffleiron.gif" alt="Waffle Iron input video" class="staggered-gif" data-delay="4500">
+                    <div class="label">Waffle Iron</div>
+                </div>
+
+                <div class="row-label">GHOST Reconstruction</div>
+                <div class="gif-cell">
+                    <img src="gifs/drill_cropped_padded.gif" alt="Drill GHOST output" class="staggered-gif" data-delay="750">
+                    <div class="label">Drill</div>
+                </div>
+                <div class="gif-cell">
+                    <img src="gifs/mixer_cropped_padded.gif" alt="Mixer GHOST output" class="staggered-gif" data-delay="2250">
+                    <div class="label">Mixer</div>
+                </div>
+                <div class="gif-cell">
+                    <img src="gifs/mug_cropped_padded.gif" alt="Mug GHOST output" class="staggered-gif" data-delay="3750">
+                    <div class="label">Mug</div>
+                </div>
+                <div class="gif-cell">
+                    <img src="gifs/waffleiron_cropped_padded.gif" alt="Waffle Iron GHOST output" class="staggered-gif" data-delay="5250">
+                    <div class="label">Waffle Iron</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline -->
+        <section>
+            <h2>Method</h2>
+            <div class="figure-container">
+                <img src="pipeline.png" alt="GHOST pipeline overview">
+                <p class="caption">GHOST pipeline: Preprocessing (segmentation, SfM, hand reconstruction, geometric prior retrieval), optimization, and 2D Gaussian Splatting with hand-object losses.</p>
+            </div>
+        </section>
+
+        <!-- Qualitative Results -->
+        <section>
+            <h2>Qualitative Results</h2>
+            <div class="quali-grid">
+                <img src="quali1.png" alt="Qualitative comparison 1">
+                <img src="quali2.png" alt="Qualitative comparison 2">
+            </div>
+        </section>
+
+        <!-- Quantitative Results -->
+        <section>
+            <h2>Quantitative Results</h2>
+
+            <h3 style="font-size: 1.3rem; margin: 16px 0 8px;">3D Reconstruction Metrics (ARCTIC Bi-CAIR)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>MPJPE<sub>RA,h</sub>&darr;</th>
+                            <th>MPJPE<sub>RA,l</sub>&darr;</th>
+                            <th>MPJPE<sub>RA,r</sub>&darr;</th>
+                            <th>CD<sub>ICP</sub>&darr;</th>
+                            <th>CD<sub>r</sub>&darr;</th>
+                            <th>CD<sub>l</sub>&darr;</th>
+                            <th>CD<sub>h</sub>&darr;</th>
+                            <th>F<sub>10mm</sub>&uarr;</th>
+                            <th>F<sub>5mm</sub>&uarr;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HOLD</td>
+                            <td>25.91</td>
+                            <td>27.13</td>
+                            <td>24.70</td>
+                            <td class="second">2.07</td>
+                            <td>123.54</td>
+                            <td>105.92</td>
+                            <td>114.73</td>
+                            <td class="second">63.92</td>
+                            <td class="second">37.13</td>
+                        </tr>
+                        <tr>
+                            <td>BIGS</td>
+                            <td class="second">24.49</td>
+                            <td class="best">24.63</td>
+                            <td class="second">24.35</td>
+                            <td class="best">1.36</td>
+                            <td class="second">31.28</td>
+                            <td class="second">46.11</td>
+                            <td class="second">38.69</td>
+                            <td class="best">81.78</td>
+                            <td class="best">56.41</td>
+                        </tr>
+                        <tr style="background: #f0fdf4;">
+                            <td><strong>GHOST</strong></td>
+                            <td class="best">24.07</td>
+                            <td class="second">25.42</td>
+                            <td class="best">22.71</td>
+                            <td>2.26</td>
+                            <td class="best">13.40</td>
+                            <td class="best">23.41</td>
+                            <td class="best">18.40</td>
+                            <td>60.88</td>
+                            <td>34.67</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 0.95rem; color: #666;">MPJPE in mm, CD in cm<sup>2</sup>. <span style="color: #059669; font-weight: 600;">Green</span> = best, <span style="color: #d97706; font-weight: 600;">orange</span> = second best.</p>
+
+            <h3 style="font-size: 1.1rem; margin: 24px 0 8px;">2D Rendering Quality</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Method</th>
+                            <th colspan="3">ARCTIC</th>
+                            <th colspan="3">HO3D</th>
+                            <th rowspan="2">Runtime&darr;</th>
+                        </tr>
+                        <tr>
+                            <th>PSNR&uarr;</th>
+                            <th>SSIM&uarr;</th>
+                            <th>LPIPS&darr;</th>
+                            <th>PSNR&uarr;</th>
+                            <th>SSIM&uarr;</th>
+                            <th>LPIPS&darr;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HOLD</td>
+                            <td>12.83</td>
+                            <td>0.66</td>
+                            <td>0.32</td>
+                            <td>16.20</td>
+                            <td>0.74</td>
+                            <td>0.21</td>
+                            <td>16h</td>
+                        </tr>
+                        <tr>
+                            <td>BIGS</td>
+                            <td class="second">24.87</td>
+                            <td class="best">0.96</td>
+                            <td class="second">0.05</td>
+                            <td class="best">24.51</td>
+                            <td class="best">0.92</td>
+                            <td class="second">0.07</td>
+                            <td class="second">13h</td>
+                        </tr>
+                        <tr style="background: #f0fdf4;">
+                            <td><strong>GHOST</strong></td>
+                            <td class="best">25.93</td>
+                            <td class="second">0.88</td>
+                            <td class="best">0.02</td>
+                            <td class="second">21.37</td>
+                            <td class="second">0.75</td>
+                            <td class="best">0.03</td>
+                            <td class="best">1h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 0.95rem; color: #666;">GHOST achieves 13-16x faster runtime while maintaining competitive or superior rendering quality.</p>
+        </section>
+
+        <!-- Citation -->
+        <section>
+            <h2>Citation</h2>
+            <div class="citation-block" id="bibtex">
+                <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+@inproceedings{aboukhadra2026ghost,
+  title     = {GHOST: Fast Category-agnostic Hand-Object Interaction Reconstruction from RGB Videos using Gaussian Splatting},
+  author    = {Aboukhadra, Ahmed Tawfik and Rogge, Marcel and Robertini, Nadia and Arafa, Abdalla and Malik, Jameel and Elhayek, Ahmed and Stricker, Didier},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Findings},
+  year      = {2026}
+}</div>
+        </section>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 Ahmed Tawfik Aboukhadra. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyBibtex() {
+            const bibtex = document.getElementById('bibtex').textContent.replace('Copy', '').trim();
+            navigator.clipboard.writeText(bibtex).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Staggered GIF loading: each GIF starts playing with a delay
+        // We achieve this by initially hiding images and loading them with delay
+        document.addEventListener('DOMContentLoaded', () => {
+            const gifs = document.querySelectorAll('.staggered-gif');
+
+            gifs.forEach(gif => {
+                const delay = parseInt(gif.dataset.delay) || 0;
+                const src = gif.getAttribute('src');
+
+                // Hide initially
+                gif.style.opacity = '0';
+                gif.style.transition = 'opacity 0.5s ease';
+
+                // Remove src to prevent immediate loading
+                gif.removeAttribute('src');
+
+                setTimeout(() => {
+                    gif.setAttribute('src', src);
+                    gif.onload = () => {
+                        gif.style.opacity = '1';
+                    };
+                }, delay);
+            });
+        });
+    </script>
+</body>
+</html>
