@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GHOST - Gaussian Hand-Object Splatting</title>
     <meta name="description" content="GHOST: Fast Category-agnostic Hand-Object Interaction Reconstruction from RGB Videos using Gaussian Splatting">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -317,12 +318,26 @@
             background: #059669;
         }
 
-        /* Logo */
+        /* Logos */
+        .logos-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
         .institution-logo {
-            display: block;
-            margin: 0 auto 20px;
             max-height: 70px;
             width: auto;
+        }
+
+        .ghost-logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
         }
 
         /* Footer */
@@ -347,7 +362,10 @@
         <a href="../" class="back-link">&larr; Back to profile</a>
 
         <header class="page-header">
-            <img src="logo_dfki_av.png" alt="DFKI Augmented Vision" class="institution-logo">
+            <div class="logos-row">
+                <img src="logo_dfki_av.png" alt="DFKI Augmented Vision" class="institution-logo">
+                <img src="logo.png" alt="GHOST" class="ghost-logo">
+            </div>
             <div>
                 <span class="venue-badge">CVPR Findings 2026</span>
                 <span class="award-badge">1st Place HANDS@ICCV25</span>
