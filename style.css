@@ -379,6 +379,24 @@ ul {
   flex: 1;
 }
 
+.profile-intro h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.alt-name-subtitle {
+  font-size: 1rem;
+  color: var(--accent);
+  font-style: italic;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+  display: block;
+}
+
 .profile-intro p {
   margin-bottom: 16px;
   color: var(--muted);
