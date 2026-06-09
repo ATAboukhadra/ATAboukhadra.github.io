@@ -1,0 +1,19 @@
+[CVPR Findings 2026] Really happy to share that our paper "GHOST: Fast Category-agnostic Hand-Object Interaction Reconstruction from RGB Videos using Gaussian Splatting" has been accepted! 🎉
+
+In this work, we tackle the challenge of reconstructing realistic hand-object interactions from a single RGB video — without requiring object templates or depth sensors. Using 2D Gaussian Splatting, GHOST achieves complete, physically consistent, and animatable reconstructions while running 13-16x faster than prior category-agnostic methods.
+
+Our approach also won 🏆 1st place at the HANDS@ICCV25 workshop on the ARCTIC Bi-CAIR benchmark!
+
+Super proud of this one — check it out below 👇
+
+📄 Paper: https://arxiv.org/abs/XXXX.XXXXX
+
+💻 Code: https://github.com/ATAboukhadra/GHOST
+
+🌐 Project page: https://ataboukhadra.github.io/ghost/
+
+This wouldn't have been possible without an incredible team — big thanks to Marcel Rogge, Nadia Robertini, Abdalla Arafa, Jameel Malik, Dr. Ahmed Elhayek, and Didier Stricker for the great collaboration 🙌
+
+Grateful to DFKI Augmented Vision for the support. If you're attending CVPR, come say hi at our poster — would love to chat! 🚀
+
+#CVPR2026 #ComputerVision #GaussianSplatting #3DReconstruction #HandObjectInteraction #DeepLearning #Research
